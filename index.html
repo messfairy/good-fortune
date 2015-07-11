@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>good fortune</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,minimun-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width" />
+    <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+<script type="text/x-underscore-template" id="J_LoginUserTpl">
+    <div style="display: table-row;">
+        <div style="display: table-cell; vertical-align: middle">
+            <img src="<%= imgurl %>" alt="<%= username %>" class="circle"/>
+        </div>
+        <div style="display: table-cell; vertical-align: middle">
+            <span>用户名: <%= username %></span> <a href="javascript: void(0)" name="<%= username %>" class="J_DetailEdit">修改</a>
+            <div>收入：<%= salary %></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-underscore-template" id="J_AwardTpl">
+    <% if(isAward){ %>
+    <img src="img/banner1.png" alt="fortune" class="fortune"/>
+    <div style="color: mediumvioletred; text-align: center">恭喜您，您已经中奖苹果6</div>
+    <% } else {%>
+    <img src="img/banner2.png" alt="fortune" class="fortune"/>
+    <div style="color: chartreuse; text-align: center">赶紧参加活动，您有机会赢取苹果6</div>
+    <% } %>
+</script>
+
+<script type="text/x-underscore-template" id="J_UserListTpl">
+    <img id="J_ListUpLoading" src="img/loading.gif" alt="loading" style="display:none; width: 50px; height: 50px"/>
+    <p style="text-align:center;"><a class="J_FirstPage" href="javascript: void(0)" style="color: #999">&lt;&lt;上翻或右滑加载第一页</a></p>
+    <section class="list-header">
+        <div style="text-align: center;">
+            <strong style="color: #333">&nbsp;&nbsp;&nbsp;最近活动前20名用户&nbsp;&nbsp;&nbsp;</strong>
+            <span style="display: block; color: #999">第<%= page %>页</span>
+        </div>
+        <div>
+            <span style="color: #666">收入8000以上：<%= Math.round(grant*100) %>%</span>
+            <span style="display: block; color: #666">8000及以下：<%= Math.round(less*100) %>%</span>
+        </div>
+    </section>
+    <ul>
+        <li>
+            <div>头像</div><div>num</div><div>用户名</div><div>性别</div><div>收入</div><div>操作</div>
+        </li>
+        <% models.forEach(function(model, index){ %>
+        <% var attrs = model.attributes; %>
+        <li name="<%= attrs.username %>" class="J_Details">
+            <div style="width:20%;">
+                <img class="circle" src="<%= attrs.imgurl %>" alt="photo"/>
+            </div>
+            <div style="width:10%;"><%= count + index + 1 %></div>
+            <div style="width:10%;"><%= attrs.username %></div>
+            <div style="width:20%;"><%= attrs.gender %></div>
+            <div style="width:20%;"><%= attrs.salary %></div>
+            <div style="width:20%;">
+                <a href="javascript: void(0)" name="<%= attrs.username %>" class="J_Details">详情</a>
+                <%if(attrs.username===loginName){%>
+                <a href="javascript: void(0)" name="<%= attrs.username %>" style="display: block" class="J_DetailEdit">修改</a>
+                <%}%>
+            </div>
+        </li>
+        <% }) %>
+    </ul>
+    <p style="text-align:center;"><a class="J_SecondPage" href="javascript: void(0)" style="color: #999">下翻或左滑加载第二页&gt;&gt;</a></p>
+</script>
+
+<script type="text/x-underscore-template" id="J_DetailUserTpl">
+    <div><img src="<%= imgurl %>" alt="<%= username %>" style="width: 100%"/></div>
+    <section style="margin: 20px">
+        <div><label>用户名：</label><%= username %></div>
+        <div><label>性别：</label><%= gender %></div>
+        <div><label>手机：</label><%= mobile %></div>
+        <div><label>收入：</label><%= salary %></div>
+        <div style="height: 80px;">
+            <button id="J_DetailClose">关闭</button>
+        </div>
+    </section>
+</script>
+
+<script type="text/x-underscore-template" id="J_UserEditTpl">
+    <div><img src="<%= imgurl %>" alt="<%= username %>" style="width: 100%;"/></div>
+    <section style="margin: 20px">
+        <div>
+            <label for="username">用户名</label><input id="username" type="text" value="<%= username %>"/>
+        </div>
+        <div>
+            <label for="gender">性别</label><input id="gender" type="text" value="<%= gender %>"/>
+        </div>
+        <div>
+            <label for="mobile">手机</label><input id="mobile" type="text" value="<%= mobile %>"/>
+        </div>
+        <div>
+            <label for="mobile">头像URL(根路径：http://static.fortune.com/)</label><input id="imgurl" type="text" value="<%= imgurl %>"/>
+        </div>
+        <div>
+            <label for="salary">薪水</label><input id="salary" type="text" value="<%= salary %>"/>
+        </div>
+        <div style="height: 110px;">
+            <button id="J_PostEdit" style="">提交并返回</button>
+            <button id="J_EditClose" style="margin-top: 10px;background-color:grey; width: 100%; height: 35px; border-radius: 10px">取消</button>
+        </div>
+    </section>
+</script>
+
+<main id="J_Main">
+    <section id="J_LoginUser">
+
+    </section>
+    <section id="J_UserList" style="overflow-y: scroll">
+
+    </section>
+    <section id="J_DetailUser" class="details">
+
+    </section>
+    <section id="J_UserEdit" class="details">
+
+    </section>
+</main>
+<script src="bower_components/requirejs/require.js" data-main="app"></script>
+</body>
+</html>

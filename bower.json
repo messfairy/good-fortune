@@ -1,0 +1,9 @@
+{
+  "name": "range events",
+  "devDependencies": {
+    "jasmine": "*",
+    "requirejs": "*",
+    "zepto": "*",
+    "backbone": "*"
+  }
+}

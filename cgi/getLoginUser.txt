@@ -1,0 +1,1 @@
+{"code": 0,"username":"Sandy","salary":6000,"gender":"女","mobile":"12345678925","usertype":"game","imgurl":"img/head1.jpg"}

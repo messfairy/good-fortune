@@ -1,0 +1,27 @@
+{
+	"code": "0代表成功；非0代表不成功",
+	"code":0,
+	"list":[
+		{"username":"Tom","salary":3000,"gender":"男","mobile":"12345678925","usertype":"story","imgurl":"img/head2.jpg"},
+		{"username":"Jim","salary":7000,"gender":"男","mobile":"12345678925","usertype":"game","imgurl":"img/head3.jpg"},
+		{"username":"David","salary":12000,"gender":"男","mobile":"12345678925","usertype":"music","imgurl":"img/head4.jpg"},
+		{"username":"Vivian","salary":10000,"gender":"女","mobile":"146563568","usertype":"game","imgurl":"img/head2.jpg"},
+		{"username":"Sandy","salary":6000,"gender":"女","mobile":"12345678925","usertype":"game","imgurl":"img/head1.jpg"},
+		{"username":"May","salary":8000,"gender":"男","mobile":"12345678925","usertype":"book","imgurl":"img/head4.jpg"},
+		{"username":"Jane","salary":5100,"gender":"女","mobile":"12345678925","usertype":"dancer","imgurl":"img/head3.jpg"},
+		{"username":"Mandy","salary":6900,"gender":"女","mobile":"12345678925","usertype":"game","imgurl":"img/head1.jpg"},
+		{"username":"Tommy","salary":6000,"gender":"男","mobile":"12345678925","usertype":"programer","imgurl":"img/head2.jpg"},
+		{"username":"John","salary":15000,"gender":"女","mobile":"12345678925","usertype":"doctor","imgurl":"img/head4.jpg"},
+		{"username":"Lily","salary":5000,"gender":"女","mobile":"12345678925","usertype":"farmer","imgurl":"img/head3.jpg"},
+		{"username":"Rose","salary":3500,"gender":"男","mobile":"12345678925","usertype":"game","imgurl":"img/head2.jpg"},
+		{"username":"Tonny","salary":17000,"gender":"女","mobile":"12345678925","usertype":"singer","imgurl":"img/head1.jpg"},
+		{"username":"Baymax","salary":11000,"gender":"男","mobile":"12345678925","usertype":"game","imgurl":"img/head4.jpg"},
+		{"username":"Lemon","salary":1500,"gender":"女","mobile":"12345678925","usertype":"teacher","imgurl":"img/head2.jpg"},
+		{"username":"Hiro","salary":12800,"gender":"女","mobile":"12345678925","usertype":"game","imgurl":"img/head3.jpg"},
+		{"username":"Raj","salary":1000,"gender":"男","mobile":"12345678925","usertype":"solder","imgurl":"img/head4.jpg"},
+		{"username":"Lucy","salary":15000,"gender":"女","mobile":"12345678925","usertype":"game","imgurl":"img/head1.jpg"},
+		{"username":"Mary","salary":25000,"gender":"男","mobile":"12345678925","usertype":"boss","imgurl":"img/head2.jpg"},
+		{"username":"Hebe","salary":36000,"gender":"男","mobile":"12345678925","usertype":"game","imgurl":"img/head3.jpg"}
+	]
+}
+
