@@ -91,3 +91,66 @@
 
 ###中间4位*代替
     Math.floor(mobile/100000000)+'****'+mobile%10000;
+
+
+
+加载和渲染工程树
+正则区分page list tpl后缀
+刷新工程树
+打开页面
+
+拉取工程树
+
+http://syawlaus.com/sicp-chapter-1-solutions/
+
+前端架构设计
+
+删除文件时
+filesystem delete
+git repository delete
+dispatch delete action
+file tree reducer
+observe and file tree delete
+observe and file store delete
+redux delete
+views delete
+
+fetch file
+PAGE ActivE action
+actived状态保存下来
+每次都有新的
+
+每次文件系统操作都由file system发布action
+所有tree store和file store更新状态
+各个数据层监听file system的状态更新
+
+active状态存到file system
+关闭状态存到file store
+删除状态存到file system
+新增状态存到file system
+删除成功后发起关闭
+关闭成功后发起active
+page active
+状态存于 file sys panel state nav item state
+menu item state等
+observe file system page状态
+更新tree store file store views
+
+关闭时更新了打开id序列状态，nav view需要ob file store该序列是否为空
+
+现在编辑区只有一个了
+要有一个基类editor board
+
+基础模块前端架构设计基本考虑清楚了
+保证流程清晰、接口简洁、粒度合理
+理想版本
+现实版本
+在考虑如何与业务模块衔接
+数据层对整体引起的改动还是很大的，尽量保证接口不变但不能保证结构不变
+
+
+
+
+
+
+
